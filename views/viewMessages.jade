@@ -1,0 +1,11 @@
+extends layout 
+
+block content 
+    h1 Messages for #{uuid}
+    each val, index in result
+        if val.message
+            p #{index}: #{val.message}
+            form(method="POST", action="/view/deleteMessage")
+                input(type="hidden", name="uuid", value=uuid)
+                input(type="hidden", name="messageId", value=val._id.toString())
+                button(type="submit") Delete

@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1 View messages
+    p Please input your password to view messages.
+    form(method="get", target="_self", id="form")
+    input(type="text", form="form", id="text-uuid", name="uuid")
+    br
+    input(type="text", form="form", id="text-password", name="pass")
+    br
+    input(type="submit", form="form", value="Submit", id="btn-submit")

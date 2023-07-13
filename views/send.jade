@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+  h1 Send message 
+  form(method="post", id="form", action="/send/inProgress")
+    if uuid
+      h2 Please input your message to continue 
+    else 
+      h2 Please input your message and UUID to continue
+      input(type="text", name="uuid", form="form")
+      br
+    textarea(name="message", cols="30", rows="10", form="form") 
+    br
+    button(name="submit", type="submit", form="form") Submit
