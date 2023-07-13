@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var {app, mongo} = require('../app');
 var debug = require('debug')('ngl-clone:server');
 var http = require('http');
 
